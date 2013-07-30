@@ -1,0 +1,36 @@
+﻿{
+	"name": "Bidtool Extension",
+	"version": "0.3.2",
+	"manifest_version": 2,
+	
+	"description": "Bid tool 競標工具",
+	"icons":{
+		"128":"icon_128.png"
+	},
+	"content_scripts": [
+    {
+      "matches": [
+      	"http://www.justbidit.com.tw/product.php*",
+      	"http://www.bidandbuy.com.tw/auction/view/a/*",
+      	"http://auction.agito.com.tw/auctions/*"
+      ],
+      
+      "js": [
+      	"jquery.min.js", 
+      	"jquery.floatDiv.js", 
+      	"date.format.js",
+      	"contentscript.js"
+      ],
+      
+      "run_at": "document_idle"
+    }],
+	"web_accessible_resources": [ 
+      	"jquery.min.js", 
+      	"jquery.floatDiv.js", 
+      	"date.format.js"
+	]/*,
+	"browser_action":	{
+		"default_icon": "icon.png"
+	}*/
+
+}
